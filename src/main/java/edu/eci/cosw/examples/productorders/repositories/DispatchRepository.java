@@ -25,4 +25,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface DispatchRepository extends JpaRepository<Despacho, Integer>{
     
+    
 }
