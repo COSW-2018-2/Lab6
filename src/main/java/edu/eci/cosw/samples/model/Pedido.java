@@ -85,10 +85,9 @@ public class Pedido implements java.io.Serializable {
 		this.fechaRadicacion = fechaRadicacion;
 	}
 
-
+        @Fetch(FetchMode.JOIN)
 	@OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL)        
 	@JoinColumn(name="PEDIDOS_idpedido")
-        @Fetch(FetchMode.JOIN)
 	public Set<DetallePedido> getDetallesPedidos() {
 		return this.almDetallesPedidos;
 	}
